@@ -599,47 +599,32 @@
           <button class="close" data-close-modal aria-label="Close quote form">X</button>
         </div>
         <div class="form-panel" style="box-shadow:none; padding:24px;">
-          <form class="form">
-            <div class="form-row"><input class="field" placeholder="Name" aria-label="Name" /><input class="field" placeholder="Phone Number" aria-label="Phone Number" /></div>
-            <div class="form-row"><select class="field" aria-label="Service Needed"><option>Service Needed</option><option>Airbnb Turnover Cleaning</option><option>Residential Cleaning</option><option>Deep Cleaning</option><option>Move-In / Move-Out Cleaning</option><option>Office Cleaning</option><option>Same-Day Cleaning</option></select><input class="field" placeholder="Property Size" aria-label="Property Size" /></div>
-            <input class="field" type="date" aria-label="Preferred Date" />
-            <textarea class="field" placeholder="Message" aria-label="Message"></textarea>
-            <button class="primary-btn dark-btn" type="submit">Submit Quote Request</button>
-          </form>
-        </div>
-      </div>
-    </div>
+          <form class="form" action="https://formsubmit.co/jacquesudahemuka05@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New quote request from North Shine Cleaners website">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-    <script>
-      const modal = document.querySelector("[data-modal]");
-      const menu = document.querySelector("[data-mobile-menu]");
-      const menuToggle = document.querySelector("[data-menu-toggle]");
-      const openModal = () => {
-        modal.classList.add("open");
-        document.body.style.overflow = "hidden";
-      };
-      const closeModal = () => {
-        modal.classList.remove("open");
-        document.body.style.overflow = "";
-      };
-      document.querySelectorAll("[data-open-modal]").forEach((button) => button.addEventListener("click", openModal));
-      document.querySelector("[data-close-modal]").addEventListener("click", closeModal);
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) closeModal();
-      });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeModal();
-      });
-      menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        menuToggle.textContent = menu.classList.contains("open") ? "Close" : "Menu";
-      });
-      menu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.remove("open");
-          menuToggle.textContent = "Menu";
-        });
-      });
-    </script>
-  </body>
-</html>
+  <div class="form-row">
+    <input class="field" name="Name" placeholder="Name" required>
+    <input class="field" name="Phone Number" placeholder="Phone Number" required>
+  </div>
+
+  <div class="form-row">
+    <select class="field" name="Service Needed" required>
+      <option value="">Service Needed</option>
+      <option>Airbnb Turnover Cleaning</option>
+      <option>Residential Cleaning</option>
+      <option>Deep Cleaning</option>
+      <option>Move-In / Move-Out Cleaning</option>
+      <option>Office Cleaning</option>
+      <option>Same-Day Cleaning</option>
+    </select>
+    <input class="field" name="Property Size" placeholder="Property Size">
+  </div>
+
+  <input class="field" name="Preferred Date" type="date">
+  <textarea class="field" name="Message" placeholder="Message"></textarea>
+
+  <button class="primary-btn dark-btn" type="submit">Submit Quote Request</button>
+</form>
